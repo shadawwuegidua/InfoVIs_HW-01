@@ -1,0 +1,6 @@
+要求.md
+__pycache__/
+assets/uploads/
+assets/*
+!assets/sample.png
+!assets/sample.svg

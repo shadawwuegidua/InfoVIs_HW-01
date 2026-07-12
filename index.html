@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW01 图片颜色聚类可视化</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="summary">
+      <div>
+        <p class="label">HW01</p>
+        <h1>图片颜色聚类可视化</h1>
+        <p class="note">使用 k-means 计算图片主色，ECharts 展示每一类的平均颜色和像素数量。</p>
+      </div>
+      <img id="sourceImage" alt="被分析的图片">
+    </section>
+    <section class="result">
+      <div class="toolbar">
+        <label>
+          上传图片
+          <input id="imageInput" type="file" accept="image/*">
+        </label>
+        <label>
+          K 值
+          <input id="kInput" type="number" min="2" max="20" value="5">
+        </label>
+        <button id="runButton" type="button">分析图片</button>
+        <button id="barButton" type="button">柱状图</button>
+        <button id="pieButton" type="button">饼图</button>
+      </div>
+      <div id="palette" class="palette"></div>
+      <div id="chart" class="chart"></div>
+    </section>
+  </main>
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="./data/result.js"></script>
+  <script src="./chart.js"></script>
+</body>
+</html>
